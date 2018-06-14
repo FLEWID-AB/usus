@@ -12,6 +12,7 @@
   },
   "bin": "./dist/bin/index.js",
   "dependencies": {
+    "ajv": "^5.5.2",
     "bluefeather": "^2.7.0",
     "chrome-launcher": "^0.3.1",
     "chrome-remote-interface": "^0.24.1",
@@ -67,12 +68,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gajus/usus"
+    "url": "https://github.com/FLEWID-AB/usus"
   },
   "scripts": {
     "build": "rm -fr ./dist && NODE_ENV=production babel ./src --out-dir ./dist --copy-files --source-maps && flow-copy-source src dist",
     "lint": "eslint ./src ./test && flow",
-    "precommit": "npm run lint && npm run test && npm run build",
+    //"precommit": "npm run lint && npm run test && npm run build",
     "test": "NODE_ENV=development nyc --reporter=text ava --verbose --serial test/factories/* test/utilities/* test/usus.js"
   },
   "version": "1.0.1"
