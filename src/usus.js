@@ -22,7 +22,8 @@ export const launchChrome = () => {
   return launch({
     chromeFlags: [
       '--disable-gpu',
-      '--headless'
+      '--headless',
+      '--no-sandbox'
     ]
   });
 };
